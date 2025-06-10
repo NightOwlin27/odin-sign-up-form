@@ -1,29 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Odin-Sign-Up=Form</title>
+    </head>
 
-<body>
-    <header>
-        <!-- <img src="./images/northern-lights-1.avif" alt="" class="background-img"> take this to CSS!-->
-        <img src="./images/odin-lined.png" alt="The Odin Logo" width="" height="auto">
-        <div class="logo">
-            <h1>Odin</h1>
-            <p>Photo by <em>Johny Goerend</em> on <em>Unsplash</em></p>
-        </div> 
-    </header>
-    <main>
-        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
-        Sign up now to get started<br> You <em>know</em>you want to.
-        </p>
-    </main>
-    <footer>
-
-    </footer>
-    <script src="index.js"></script>
-</body>
-
+    <body>
+        <header>
+            <div class="banner">
+                <!-- <img src="./images/northern-lights-1.avif" class="background-img" alt="a mountain range with the northern lights shining above"> -->
+                <div class="logo">
+                    <img src="./images/odin-lined.png" alt="The Odin Logo" height="auto" width="90vw">
+                    <p class="logo-text">ODIN</p>
+                </div> 
+                <p class="credit-text">Photo by <u>Johny Goerend</u> on <u>Unsplash</u></p>
+            </div>
+        </header>
+        <main>
+            <p class="main-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
+            Sign up <em>now</em> to get started.</p>
+            <p>You<em> know</em> you want to.</p>
+            <div class="form-section">
+                <p>Let's do this!</p>
+                <form class="main-form">
+                    <div class="label-line-1">
+                        <label for="first-name">First Name</label>
+                        <input 
+                            type="text" 
+                            id="firstname" 
+                            placeholder="John"
+                            >
+                        <label for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email"
+                            placeholder="john.doe@theodin.com"
+                            >
+                        <label for="password">Password</label>
+                        <input 
+                            type="password"
+                            id="password"
+                            placeholder="******"
+                            >
+                    </div>
+                    <div class="label-line-2">
+                        <label for="last-name">Last Name</label>
+                        <input 
+                            type="text" 
+                            id="last-name" 
+                            placeholder="Doe"
+                            >
+                        <label for="phone-number">Phone Number</label>
+                        <input 
+                            type="text" 
+                            id="phone-number" 
+                            placeholder="(XXX) XXX - XXX"
+                            >
+                        <label for="confirm-password">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            id="confirm-password"
+                            placeholder="******"
+                            >
+                    </div> 
+                </form>
+            </div>
+            
+            <button class="account-btn">Create Account</button>
+            <p>Already have an account?</p>
+            <a href="" class="log-in-link"></a>
+        </main>
+        <script src="index.js"></script>
+    </body>
 </html>
