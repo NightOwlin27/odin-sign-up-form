@@ -15,11 +15,23 @@ body {
     background-color: lightgray;
     font-family: "Raleway", sans-serif;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 main {
-    margin-left: 3em;
+    
+}
+
+p {
+    margin-left: 2em;
+}
+
+a {
+
+}
+
+button {
+    margin-left: 2em;
 }
 
 .background-img {
@@ -35,7 +47,7 @@ main {
     border: 2px solid black;
     background-image: url(./images/northern-lights-1.avif);
     background-size: cover;
-    width: 25vw;
+    width: 30vw;
     height: 100vh;
     gap: 29em;
 }
@@ -68,7 +80,15 @@ main {
 }
 
 .main-text {
+    display: block;
+    padding: 13em 15em 2em 0em;
+    margin-right: 40vw;
     font-weight: bold;
+    border: 2px solid purple;
+}
+
+.motivation-text {
+    padding-top: 1em;
 }
 
 .main-form {
@@ -82,4 +102,7 @@ main {
 .label-line-2 {
     display: flex;
     flex-direction: column;
+    border: 2px solid blue;
+    gap: 1em;
+    font-size: .7em;
 }
