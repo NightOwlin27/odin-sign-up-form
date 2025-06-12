@@ -11,69 +11,75 @@
     </head>
 
     <body>
-        <header>
-            <div class="banner">
-                <!-- <img src="./images/northern-lights-1.avif" class="background-img" alt="a mountain range with the northern lights shining above"> -->
-                <div class="logo">
-                    <img src="./images/odin-lined.png" alt="The Odin Logo" height="auto" width="90vw">
-                    <p class="logo-text">ODIN</p>
-                </div> 
-                <p class="credit-text">Photo by <u>Johny Goerend</u> on <u>Unsplash</u></p>
-            </div>
-        </header>
-        <main>
-            <p class="main-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
-            Sign up <em>now</em> to get started.</p>
-            <p>You<em> know</em> you want to.</p>
-            <div class="form-section">
+        <div class="banner">
+            <div class="logo">
+                <img src="./images/odin-lined.png" alt="The Odin Logo" height="auto" width="100px">
+                <p class="logo-text">ODIN</p>
+            </div> 
+            <p class="credit-text">Photo by <u>Johny Goerend</u> on <u>Unsplash</u></p>
+        </div>
+        <div class="main-content">
+            <header>
+                <p class="main-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
+                Sign up <em>now</em> to get started.</p>
+                <p class="sub-text">You<em> know</em> you want to.</p>
+            </header>
+            <main>
                 <p class="motivation-text">Let's do this!</p>
                 <form class="main-form">
                     <div class="label-line-1">
-                        <label for="first-name">First Name</label>
+                        <label for="first-name">FIRST NAME</label>
                         <input 
                             type="text" 
                             id="firstname" 
                             placeholder="John"
+                            required
                             >
-                        <label for="email">Email</label>
+                        <label for="email">EMAIL</label>
                         <input 
                             type="email" 
                             id="email"
                             placeholder="john.doe@theodin.com"
+                            required
                             >
-                        <label for="password">Password</label>
+                        <label for="password">PASSWORD</label>
                         <input 
                             type="password"
                             id="password"
                             placeholder="******"
+                            required
                             >
                     </div>
                     <div class="label-line-2">
-                        <label for="last-name">Last Name</label>
+                        <label for="last-name">LAST NAME</label>
                         <input 
                             type="text" 
                             id="last-name" 
                             placeholder="Doe"
+                            required
                             >
-                        <label for="phone-number">Phone Number</label>
+                        <label for="phone-number">PHONE NUMBER</label>
                         <input 
                             type="text" 
                             id="phone-number" 
                             placeholder="(XXX) XXX - XXX"
+                            required
                             >
-                        <label for="confirm-password">Confirm Password</label>
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
                         <input 
                             type="password" 
                             id="confirm-password"
                             placeholder="******"
+                            required
                             >
                     </div> 
                 </form>
-            </div>
-            
-            <button class="account-btn">Create Account</button>
-            <p>Already have an account?<a href="" class="log-in-link"> Log In</a></p>
-        </main>
+            </main>
+            <footer>
+                <button class="account-btn">Create Account</button>
+                <p class="footer-text">Already have an account?<a href="" class="log-in-link"> Log In</a></p>
+            </footer>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>
