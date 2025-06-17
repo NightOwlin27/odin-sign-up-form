@@ -63,6 +63,7 @@ input {
     /* margin: 10px 0px; */
     border-radius: 5px;
     height: 2em;
+    padding-left: .5em;
     appearance: none;
     border: 3px solid whitesmoke;
     background-color: whitesmoke;
@@ -73,20 +74,16 @@ input:hover,
 input:focus {
     border: 3px solid #6AACA0;
 }
-/* input:valid {
+input:valid {
     border: 3px solid green;
 }
 
 input:invalid {
     border: 3px solid red;
-} */
+}
 
 label {
     margin-top: 1em;
-}
-
-img {
-    /* border: 2px solid yellow; */
 }
 
 a {
@@ -185,14 +182,12 @@ button:hover {
 .main-form {
     display: flex;
     height: 12em;
-    /* width: 100vw; */
 }
 
 .label-line-1,
 .label-line-2 {
     display: flex;
     flex-direction: column;
-    /* border: 2px solid blue; */
     font-size: .7em;
     width: 15vw;
 }
@@ -206,16 +201,16 @@ button:hover {
     font-size: 1rem;
 }
 
-
 .modal {
-    
+    display: none;
     position: relative;
+    position: fixed;
     margin: auto;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    box-shadow: 6px 6px 6px rgba(106, 172, 160, 0.616);
+    box-shadow: 0px 0px 6px 6px rgba(106, 172, 160, 0.616);
     background-color: whitesmoke;
     width: 600px;
     height: 400px;
@@ -228,11 +223,6 @@ button:hover {
     background-color:#6AACA0;
     box-shadow: -1px 3px 4px rgba(106, 172, 160, 0.616);
     border-radius: 5px;
-    margin: .2em 0em;
-}
-
-.modal-logo {
-    
 }
 
 .modal-logo-text {
@@ -240,29 +230,46 @@ button:hover {
     text-align: center;
 }
 
-.modal-button {
+.modal-btn {
     position: absolute;
     top: 0;
     right: 0;
     font-size: 2rem;
-    padding: .1em .1em;
+    padding: .1em .2em;
     margin: .4em .4em;
     background-color: #e2b260;
-    border: none;
+    border: 3px solid #6AACA0
+}
+
+.submit-btn {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    border: 3px solid #e2b260;
 }
 
 .modal-text {
-    display: flex;
-    flex-direction: column;
     color: black;
     text-align: center;
     margin-top: 1.5em;
-    /* border: 2px solid black; */
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    width: 600px;
+    height: auto;
 }
 
 .modal-label {
     font-weight: bold;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .modal-input {
@@ -271,10 +278,15 @@ button:hover {
 
 #full-name,
 #modal-email {
-    width: 70%;
-    margin: 0em 0em 1.5em 4em;
+    width: 60%;
+    padding-left: .5em;
 }
 
 .one {
     margin-top: 1em;
 }
+
+.inner-text {
+    color: black;
+}
+

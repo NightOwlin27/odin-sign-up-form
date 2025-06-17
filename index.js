@@ -1,8 +1,39 @@
-
-const modal = document.getElementByClassName('modal')
-const modal = document.getElementById('modal')
+const modal = document.querySelector('.modal');
+const modalBtn = document.querySelector('.modal-btn');
+const submitBtn = document.querySelector('.submit-btn');
+const mainForm = document.querySelector('.main-form');
+const modalForm = document.querySelector('.modal-form');
+const modalText = document.querySelector('.modal-text');
 
 setTimeout(function() {
     modal.style.display = 'inline';
-    // console.log(modal)
-}, 1500);
+}, 2000);
+
+modalBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+})
+
+mainForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for your submission!')
+})
+
+modalForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    modalText.innerHTML = `<div class="inner-loading">
+                                <img src="loading.svg">
+                                <p class='inner-text'>Uploading data...</p>
+                            </div>`
+
+    setTimeout(function() {
+        modal.style.height = '500px'
+        modalText.textContent = `Welcome to the Techno Viking Community!`
+        modalForm.innerHTML = `<img src="images/techno-viking.gif" 
+                                alt="a viking dancing to techno music">`
+    }, 3000)
+    alert('modalForm submitted');
+})
+
+
+
+

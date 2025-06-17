@@ -26,13 +26,14 @@
             </header>
             <main>
                 <p class="motivation-text">Let's do this!</p>
-                <form class="main-form">
+                <form class="main-form" id="main-form">
                     <div class="label-line-1">
                         <label for="first-name">FIRST NAME</label>
                         <input 
                             type="text" 
                             id="firstname" 
                             placeholder="John"
+                            minlength="1"
                             required
                             >
                         <label for="email">EMAIL</label>
@@ -47,6 +48,7 @@
                             type="password"
                             id="password"
                             placeholder="******"
+                            pattern="[a-zA-Z0-9]+"
                             required
                             >
                     </div>
@@ -56,6 +58,7 @@
                             type="text" 
                             id="last-name" 
                             placeholder="Doe"
+                            minlength="2"
                             required
                             >
                         <label for="phone-number">PHONE NUMBER</label>
@@ -63,6 +66,7 @@
                             type="text" 
                             id="phone-number" 
                             placeholder="(XXX) XXX - XXX"
+                            minlength="9"
                             required
                             >
                         <label for="confirm-password">CONFIRM PASSWORD</label>
@@ -70,22 +74,26 @@
                             type="password" 
                             id="confirm-password"
                             placeholder="******"
+                            pattern="[a-zA-Z0-9]+"
                             required
                             >
                     </div> 
                 </form>
             </main>
             <footer>
-                <button class="account-btn">Create Account</button>
+                <button type='submit' form='main-form'class="account-btn">Create Account</button>
                 <p class="footer-text">Already have an account?<a href="" class="log-in-link"> Log In</a></p>
-                <div class="modal" id="modal">
+                <div class="modal">
                     <div class="modal-header">
                         <img src="./images/odin-logo.png" alt="The Odin Logo" height="auto" width="80px" class="modal-logo">
                         <p class="modal-logo-text">ODIN</p>
                     </div>
-                    
-                    <button class="modal-button">X</button>
-                    <div class="modal-text">Become apart of the odin community and sign Up for our Newsletter!
+
+                    <button class="modal-btn">X</button>
+
+                    <div class="modal-text">Become apart of the odin community and Sign Up for our Newsletter!</div>
+
+                    <form class="modal-form">
                         <label for="Full Name" class="modal-label one">Full Name</label>
                         <input 
                             type="text" 
@@ -93,6 +101,7 @@
                             placeholder="John Doe" 
                             name="full-name"
                             class="modal-input"
+                            required
                             >
                         <label for="Email" class="modal-label">Email</label>
                         <input 
@@ -101,11 +110,13 @@
                             placeholder="john.doe@theodin.com" 
                             name="modal-email"
                             class="modal-input"
+                            required
                             >
-                    </div>
+                            <button type='submit' class="submit-btn">Submit</button>
+                    </form>
                 </div>
             </footer>
-        </div>
+            
         <script src="index.js"></script>
     </body>
 </html>
