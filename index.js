@@ -15,23 +15,22 @@ modalBtn.addEventListener('click', function() {
 
 mainForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    alert('Thank you for your submission!')
+    alert('Thank you for your submission!');
 })
 
 modalForm.addEventListener('submit', function(event) {
     event.preventDefault();
     modalText.innerHTML = `<div class="inner-loading">
                                 <img src="loading.svg">
-                                <p class='inner-text'>Uploading data...</p>
+                                <p class='inner-text'>Uploading data...(not really)</p>
                             </div>`
 
     setTimeout(function() {
         modal.style.height = '500px'
         modalText.textContent = `Welcome to the Techno Viking Community!`
-        modalForm.innerHTML = `<img src="images/techno-viking.gif" 
-                                alt="a viking dancing to techno music">`
-    }, 3000)
-    alert('modalForm submitted');
+        modalForm.innerHTML = `<img src="images/techno-viking.gif" class="techno-viking"
+                                alt="a shirtless man dancing in the street">`
+    }, 3000);
 })
 
 

@@ -19,11 +19,13 @@
             <p class="credit-text">Photo by <u>Johny Goerend</u> on <u>Unsplash</u></p>
         </div>
         <div class="main-content">
+            
             <header>
                 <p class="main-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
                 Sign up <em>now</em> to get started.</p>
                 <p class="sub-text">You<em> know</em> you want to.</p>
             </header>
+
             <main>
                 <p class="motivation-text">Let's do this!</p>
                 <form class="main-form" id="main-form">
@@ -33,7 +35,7 @@
                             type="text" 
                             id="firstname" 
                             placeholder="John"
-                            minlength="1"
+                            minlength="2"
                             required
                             >
                         <label for="email">EMAIL</label>
@@ -67,6 +69,7 @@
                             id="phone-number" 
                             placeholder="(XXX) XXX - XXX"
                             minlength="9"
+                            pattern="^\(\d{3}\) \d{3}-\d{4}$"
                             required
                             >
                         <label for="confirm-password">CONFIRM PASSWORD</label>
@@ -80,6 +83,7 @@
                     </div> 
                 </form>
             </main>
+
             <footer>
                 <button type='submit' form='main-form'class="account-btn">Create Account</button>
                 <p class="footer-text">Already have an account?<a href="" class="log-in-link"> Log In</a></p>
@@ -88,11 +92,8 @@
                         <img src="./images/odin-logo.png" alt="The Odin Logo" height="auto" width="80px" class="modal-logo">
                         <p class="modal-logo-text">ODIN</p>
                     </div>
-
                     <button class="modal-btn">X</button>
-
                     <div class="modal-text">Become apart of the odin community and Sign Up for our Newsletter!</div>
-
                     <form class="modal-form">
                         <label for="Full Name" class="modal-label one">Full Name</label>
                         <input 
@@ -101,6 +102,7 @@
                             placeholder="John Doe" 
                             name="full-name"
                             class="modal-input"
+                            minlength="2"
                             required
                             >
                         <label for="Email" class="modal-label">Email</label>
