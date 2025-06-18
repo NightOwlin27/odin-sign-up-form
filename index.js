@@ -1,9 +1,10 @@
-const modal = document.querySelector('.modal');
-const modalBtn = document.querySelector('.modal-btn');
-const submitBtn = document.querySelector('.submit-btn');
 const mainForm = document.querySelector('.main-form');
+const modal = document.querySelector('.modal');
 const modalForm = document.querySelector('.modal-form');
 const modalText = document.querySelector('.modal-text');
+const modalBtn = document.querySelector('.modal-btn');
+const submitBtn = document.querySelector('.submit-btn');
+
 
 setTimeout(function() {
     modal.style.display = 'inline';
@@ -16,6 +17,7 @@ modalBtn.addEventListener('click', function() {
 mainForm.addEventListener('submit', function(event) {
     event.preventDefault();
     alert('Thank you for your submission!');
+    mainForm.reset();
 })
 
 modalForm.addEventListener('submit', function(event) {
@@ -31,8 +33,8 @@ modalForm.addEventListener('submit', function(event) {
         modalForm.innerHTML = `<img src="images/techno-viking.gif" class="techno-viking"
                                 alt="a shirtless man dancing in the street">`
     }, 3000);
+
+    modalForm.reset();
 })
-
-
 
 
